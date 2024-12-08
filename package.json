@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run browser-open && next dev -p 4000",
+    "browser-open": "start http://localhost:4000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -37,6 +38,9 @@
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
+    "@tiptap/pm": "^2.10.2",
+    "@tiptap/react": "^2.10.2",
+    "@tiptap/starter-kit": "^2.10.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
