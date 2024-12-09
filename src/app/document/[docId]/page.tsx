@@ -1,10 +1,10 @@
 import Editor from "./editor";
 
-interface DocPageProps {
+interface DocumentIdPageProps {
   params: Promise<{ docId: string }>;
 }
 
-const DocPage = async ({ params }: DocPageProps) => {
+const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
   const { docId } = await params;
 
   return (
@@ -14,4 +14,4 @@ const DocPage = async ({ params }: DocPageProps) => {
   );
 };
 
-export default DocPage;
+export default DocumentIdPage;
