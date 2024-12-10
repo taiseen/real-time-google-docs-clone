@@ -1,5 +1,5 @@
-import Toolbar from "./toolbar";
-import Editor from "./editor";
+import Toolbar from "./(toolbar)";
+import Editor from "./(editor)";
 
 interface DocumentIdPageProps {
   params: Promise<{ docId: string }>;
@@ -7,6 +7,7 @@ interface DocumentIdPageProps {
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
   const { docId } = await params;
+  console.log(docId);
 
   return (
     <div className="min-h-screen bg-doc">

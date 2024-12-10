@@ -17,8 +17,13 @@
 * npm install @tiptap/extension-underline@2.10.2 --legacy-peer-deps
 * npm install @tiptap/extension-text-style@2.10.2 --legacy-peer-deps
 * npm install @tiptap/extension-font-family@2.10.2 --legacy-peer-deps
+* npm install @tiptap/extension-heading@2.10.2 --legacy-peer-deps
+* npm install @tiptap/extension-highlight@2.10.2 --legacy-peer-deps
+* npm install @tiptap/extension-color@2.10.2 --legacy-peer-deps
 * npm install tiptap-extension-resize-image@1.2.1 --legacy-peer-deps
+* npm install react-color@2.19.3 --legacy-peer-deps
 * npm install zustand@5.0.1 --legacy-peer-deps
+* npm install --save-dev @types/react-color@3.0.12 --legacy-peer-deps
 
 ```
 npm run dev
