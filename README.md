@@ -14,7 +14,11 @@
 * npm install @tiptap/extension-table-row@2.10.2 --legacy-peer-deps
 * npm install @tiptap/extension-table-cell@2.10.2 --legacy-peer-deps
 * npm install @tiptap/extension-image@2.10.2 --legacy-peer-deps
+* npm install @tiptap/extension-underline@2.10.2 --legacy-peer-deps
+* npm install @tiptap/extension-text-style@2.10.2 --legacy-peer-deps
+* npm install @tiptap/extension-font-family@2.10.2 --legacy-peer-deps
 * npm install tiptap-extension-resize-image@1.2.1 --legacy-peer-deps
+* npm install zustand@5.0.1 --legacy-peer-deps
 
 ```
 npm run dev
