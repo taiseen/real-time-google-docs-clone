@@ -33,6 +33,7 @@ npm run dev
 
 * dynamically get params id's
 * layout page do not rerender
+* usage of color picker
 
 ## Custom Port & Auto Browser Open
 

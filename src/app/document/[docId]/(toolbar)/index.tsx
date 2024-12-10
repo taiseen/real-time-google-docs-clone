@@ -1,8 +1,10 @@
 "use client";
 
 import useEditorStore from "@/store/use-editor-store";
+import HighlightColorButton from "./highlightColorButton";
 import HeadingLevelButton from "./headingLevelButton";
 import FontFamilyButton from "./fontFamilyButton";
+import TextColorButton from "./textColorButton";
 import ToolbarButton from "./toolbarButton";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -108,11 +110,11 @@ const Toolbar = () => {
 
       <FontFamilyButton />
 
-      <Separator orientation="vertical" className="h-6 lbg-neutral-300" />
+      <Separator orientation="vertical" className="h-6 bg-neutral-300" />
 
       <HeadingLevelButton />
 
-      <Separator orientation="vertical" className="h-6 lbg-neutral-300" />
+      <Separator orientation="vertical" className="h-6 bg-neutral-300" />
 
       {/* TODO: Font size */}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
@@ -121,9 +123,10 @@ const Toolbar = () => {
         <ToolbarButton key={item.label} {...item} />
       ))}
 
-      {/* TODO: Text color */}
+      <TextColorButton />
 
-      {/* TODO: Highlight color */}
+      <HighlightColorButton />
+
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
 
       {/* TODO: Link */}
