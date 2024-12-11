@@ -3,9 +3,11 @@
 import useEditorStore from "@/store/use-editor-store";
 import HighlightColorButton from "./highlightColorButton";
 import HeadingLevelButton from "./headingLevelButton";
+import ImageUploadButton from "./imageUploadButton";
 import FontFamilyButton from "./fontFamilyButton";
 import TextColorButton from "./textColorButton";
 import ToolbarButton from "./toolbarButton";
+import LinkButton from "./linkButton";
 import { Separator } from "@/components/ui/separator";
 import {
   MessageSquarePlusIcon,
@@ -129,8 +131,10 @@ const Toolbar = () => {
 
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
 
-      {/* TODO: Link */}
-      {/* TODO: Image */}
+      <LinkButton />
+
+      <ImageUploadButton />
+
       {/* TODO: Align */}
       {/* TODO: Line height */}
       {/* TODO:1 List */}
