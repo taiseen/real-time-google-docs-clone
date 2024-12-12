@@ -7,6 +7,8 @@ import ImageUploadButton from "./imageUploadButton";
 import FontFamilyButton from "./fontFamilyButton";
 import TextColorButton from "./textColorButton";
 import ToolbarButton from "./toolbarButton";
+import AlignButton from "./alignButton";
+import ListButton from "./listButton";
 import LinkButton from "./linkButton";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -135,9 +137,12 @@ const Toolbar = () => {
 
       <ImageUploadButton />
 
-      {/* TODO: Align */}
+      <AlignButton />
+
       {/* TODO: Line height */}
-      {/* TODO:1 List */}
+
+      <ListButton />
+
       {sections[2].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}

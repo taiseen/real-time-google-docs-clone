@@ -21,23 +21,32 @@
 * npm install @tiptap/extension-highlight@2.10.2 --legacy-peer-deps
 * npm install @tiptap/extension-color@2.10.2 --legacy-peer-deps
 * npm install @tiptap/extension-link@2.10.2 --legacy-peer-deps
+* npm install @tiptap/extension-text-align@2.10.2 --legacy-peer-deps
 * npm install tiptap-extension-resize-image@1.2.1 --legacy-peer-deps
 * npm install react-color@2.19.3 --legacy-peer-deps
 * npm install zustand@5.0.1 --legacy-peer-deps
 * npm install --save-dev @types/react-color@3.0.12 --legacy-peer-deps
 
+### Locally dependencies installed:-
+
+```js
+npm i --legacy-peer-deps
 ```
+
+### For locally run this project:-
+
+```js
 npm run dev
 ```
 
-## Learning Points:-
+### Learning Points:-
 
 * dynamically get params id's
 * layout page do not rerender
 * usage of color picker
 * image upload dialog open programmatically
 
-## Custom Port & Auto Browser Open
+### Custom Port & Auto Browser Open
 
 ```js
   "scripts": {
