@@ -6,6 +6,7 @@ import HeadingLevelButton from "./headingLevelButton";
 import ImageUploadButton from "./imageUploadButton";
 import FontFamilyButton from "./fontFamilyButton";
 import TextColorButton from "./textColorButton";
+import FontSizeButton from "./fontSizeButton";
 import ToolbarButton from "./toolbarButton";
 import AlignButton from "./alignButton";
 import ListButton from "./listButton";
@@ -120,7 +121,8 @@ const Toolbar = () => {
 
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
 
-      {/* TODO: Font size */}
+      <FontSizeButton />
+
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
 
       {sections[1].map((item) => (

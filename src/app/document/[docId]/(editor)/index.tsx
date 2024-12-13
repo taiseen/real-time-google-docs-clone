@@ -1,7 +1,9 @@
 "use client";
 
 import { useEditor, EditorContent } from "@tiptap/react";
+import { FontSizeExtension } from "@/extension/fontSize";
 import { Color } from "@tiptap/extension-color";
+
 import StarterKit from "@tiptap/starter-kit";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
@@ -58,6 +60,7 @@ const Editor = () => {
 
     extensions: [
       StarterKit,
+      FontSizeExtension,
       TaskList,
       TaskItem.configure({ nested: true }),
       Table.configure({ resizable: true }),
