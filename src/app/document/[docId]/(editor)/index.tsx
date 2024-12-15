@@ -1,9 +1,11 @@
 "use client";
 
-import { useEditor, EditorContent } from "@tiptap/react";
+import { LineHeightExtension } from "@/extension/lineHeight";
 import { FontSizeExtension } from "@/extension/fontSize";
+import { useEditor, EditorContent } from "@tiptap/react";
 import { Color } from "@tiptap/extension-color";
 
+import useEditorStore from "@/store/use-editor-store";
 import StarterKit from "@tiptap/starter-kit";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
@@ -17,9 +19,8 @@ import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
 import Highlight from "@tiptap/extension-highlight";
-import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
-import useEditorStore from "@/store/use-editor-store";
+import Link from "@tiptap/extension-link";
 
 const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -61,6 +62,11 @@ const Editor = () => {
     extensions: [
       StarterKit,
       FontSizeExtension,
+      LineHeightExtension,
+      // .configure({
+      //   types: ["heading", "paragraph"],
+      //   defaultLineHeight: "normal",
+      // }),
       TaskList,
       TaskItem.configure({ nested: true }),
       Table.configure({ resizable: true }),

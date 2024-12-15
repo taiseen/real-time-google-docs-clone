@@ -5,6 +5,7 @@ import HighlightColorButton from "./highlightColorButton";
 import HeadingLevelButton from "./headingLevelButton";
 import ImageUploadButton from "./imageUploadButton";
 import FontFamilyButton from "./fontFamilyButton";
+import LineHeightButton from "./lineHeightButton";
 import TextColorButton from "./textColorButton";
 import FontSizeButton from "./fontSizeButton";
 import ToolbarButton from "./toolbarButton";
@@ -141,7 +142,7 @@ const Toolbar = () => {
 
       <AlignButton />
 
-      {/* TODO: Line height */}
+      <LineHeightButton />
 
       <ListButton />
 
