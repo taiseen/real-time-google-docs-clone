@@ -90,7 +90,7 @@ const Editor = () => {
       }),
     ],
 
-    content: "<p>Hello World! 💖</p>",
+    // content: "<p>Hello World! 💖</p>",
   });
 
   return (
