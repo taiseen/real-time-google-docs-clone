@@ -89,6 +89,10 @@ body {
   }
 }
 
+.menubarTrigger{
+  @apply text-sm font-normal py-0.5 px-[7px] rounded-sm hover:bg-muted h-auto cursor-pointer
+}
+
 .tiptap {
 
   /* Heading styles */

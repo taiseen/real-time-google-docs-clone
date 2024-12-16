@@ -59,3 +59,8 @@ npm run dev
     "browser-open": "start http://localhost:4000",
   },
 ```
+
+## Resource
+
+* <https://tiptap.dev>
+* <https://logoipsum.com>
