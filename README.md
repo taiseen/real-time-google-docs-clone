@@ -24,6 +24,7 @@
 * npm install @tiptap/extension-text-align@2.10.2 --legacy-peer-deps
 * npm install tiptap-extension-resize-image@1.2.1 --legacy-peer-deps
 * npm install react-color@2.19.3 --legacy-peer-deps
+* npm install react-icons@5.3.0 --legacy-peer-deps
 * npm install zustand@5.0.1 --legacy-peer-deps
 * npm install --save-dev @types/react-color@3.0.12 --legacy-peer-deps
 
@@ -45,6 +46,10 @@ npm run dev
 * layout page do not rerender
 * usage of color picker
 * image upload dialog open programmatically
+* ruler indicator inside allocated area
+* dynamically object key selection
+* mouse dragging marker selection
+* ruler dynamic calculation
 
 ### Custom Port & Auto Browser Open
 

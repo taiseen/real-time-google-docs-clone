@@ -21,11 +21,14 @@ import Underline from "@tiptap/extension-underline";
 import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import Link from "@tiptap/extension-link";
+import Ruler from "./ruler";
 
 const Editor = () => {
   const { setEditor } = useEditorStore();
 
   const editor = useEditor({
+    immediatelyRender: false,
+
     onCreate: ({ editor }) => {
       setEditor(editor);
     },
@@ -63,10 +66,6 @@ const Editor = () => {
       StarterKit,
       FontSizeExtension,
       LineHeightExtension,
-      // .configure({
-      //   types: ["heading", "paragraph"],
-      //   defaultLineHeight: "normal",
-      // }),
       TaskList,
       TaskItem.configure({ nested: true }),
       Table.configure({ resizable: true }),
@@ -96,6 +95,8 @@ const Editor = () => {
 
   return (
     <div className="size-full overflow-x-auto px-4 bg-editor print:p-0 print:bg-white print:overflow-visible">
+      <Ruler />
+
       <div className="min-w-max flex justify-center w-[816px] py-4 print:py-0 mx-auto print:w-full print:min-w-0">
         <EditorContent editor={editor} />
       </div>
