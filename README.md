@@ -1,4 +1,4 @@
-> 08 - December - 2024
+> 8 - December - 2024
 
 ## Real Time Google Doc Clone
 
@@ -47,11 +47,13 @@ npm run dev
 * layout page do not rerender
 * usage of color picker
 * image upload dialog open programmatically
-* ruler indicator inside allocated area
+* ruler indicator inside allocated area (dynamic calculation)
 * dynamically object key selection
 * mouse dragging marker selection
 * ruler dynamic calculation
 * search-param custom hook
+* Menu & Submenu system at UI
+* Carousel system at UI
 
 ### Custom Port & Auto Browser Open
 

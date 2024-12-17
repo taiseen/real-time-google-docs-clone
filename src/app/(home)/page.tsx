@@ -1,5 +1,6 @@
+import TemplatesGallery from "./templatesGallery";
+import DocLink from "@/components/docLink";
 import Navbar from "./navbar";
-import Link from "next/link";
 
 const Home = () => {
   return (
@@ -9,11 +10,8 @@ const Home = () => {
       </div>
 
       <div className="mt-16">
-        Click{" "}
-        <Link href="/document/123">
-          <span className="[text-blue-500 underline">&nbsp; here&nbsp; </span>
-        </Link>{" "}
-        to go to document id
+        <TemplatesGallery />
+        <DocLink />
       </div>
     </div>
   );
