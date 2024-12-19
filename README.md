@@ -27,6 +27,7 @@
 * npm install react-icons@5.3.0 --legacy-peer-deps
 * npm install nuqs@2.2.3 --legacy-peer-deps
 * npm install zustand@5.0.1 --legacy-peer-deps
+* npm install convex@1.17.3 --legacy-peer-deps
 * npm install --save-dev @types/react-color@3.0.12 --legacy-peer-deps
 
 ### Locally dependencies installed:-
@@ -39,6 +40,12 @@ npm i --legacy-peer-deps
 
 ```js
 npm run dev
+```
+
+### For running database:-
+
+```js
+npx convex dev
 ```
 
 ### Learning Points:-
