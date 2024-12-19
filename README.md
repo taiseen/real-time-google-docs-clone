@@ -28,6 +28,7 @@
 * npm install nuqs@2.2.3 --legacy-peer-deps
 * npm install zustand@5.0.1 --legacy-peer-deps
 * npm install convex@1.17.3 --legacy-peer-deps
+* npm install @clerk/nextjs@6.5.1 --legacy-peer-deps
 * npm install --save-dev @types/react-color@3.0.12 --legacy-peer-deps
 
 ### Locally dependencies installed:-
@@ -59,8 +60,10 @@ npx convex dev
 * mouse dragging marker selection
 * ruler dynamic calculation
 * search-param custom hook
-* Menu & Submenu system at UI
-* Carousel system at UI
+* menu & submenu system at UI
+* carousel system at UI
+* convex db schema system
+* clerk auth system at UI
 
 ### Custom Port & Auto Browser Open
 
@@ -74,4 +77,6 @@ npx convex dev
 ## Resource
 
 * <https://tiptap.dev>
+* <https://clerk.com>
+* <https://convex.dev>
 * <https://logoipsum.com>

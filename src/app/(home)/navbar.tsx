@@ -1,5 +1,6 @@
 import RootLink from "@/components/rootLink";
 import SearchInput from "./searchInput";
+import { UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -12,7 +13,7 @@ const Navbar = () => {
 
       <SearchInput />
 
-      <div></div>
+      <UserButton />
     </nav>
   );
 };
