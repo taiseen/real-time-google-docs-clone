@@ -23,7 +23,7 @@ export function ConvexClientProvider({ children }: { children: ReactNode }) {
         
         <Unauthenticated>
           <div className="min-h-screen flex flex-col items-center justify-center">
-            <SignIn />
+            <SignIn routing="hash"/>
           </div>
         </Unauthenticated>
 

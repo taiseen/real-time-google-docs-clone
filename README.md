@@ -64,6 +64,7 @@ npx convex dev
 * carousel system at UI
 * convex db schema system
 * clerk auth system at UI
+* usage of table data display system at UI
 
 ### Custom Port & Auto Browser Open
 
