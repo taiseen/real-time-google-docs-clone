@@ -60,10 +60,11 @@ npx convex dev
 * mouse dragging marker selection
 * ruler dynamic calculation
 * search-param custom hook
-* menu & submenu system at UI
-* carousel system at UI
 * convex db schema system
-* clerk auth system at UI
+* usage of carousel system at UI
+* usage of clerk auth system at UI
+* usage of menu & submenu system at UI
+* usage of alert & dialog system at UI
 * usage of table data display system at UI
 
 ### Custom Port & Auto Browser Open
