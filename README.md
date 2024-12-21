@@ -2,19 +2,21 @@
 
 ## Real Time Google Doc Clone
 
-### Locally dependencies installed:-
+* ### To Learning Purpose || R&D
+
+### For package install:-
 
 ```js
 npm i --legacy-peer-deps
 ```
 
-### For locally run this project:-
+### For run the project:-
 
 ```js
 npm run dev
 ```
 
-### For running database:-
+### For run the database:-
 
 ```js
 npx convex dev
@@ -23,10 +25,19 @@ npx convex dev
 ### Need these config values to run this project:-
 
 ```js
-const configs = {
-    NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
-}
+CLERK_SECRET_KEY = *****
+CONVEX_DEPLOYMENT = *****
+NEXT_PUBLIC_CONVEX_URL = *****
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = *****
+```
+
+### Custom port & auto browser open:-
+
+```js
+"scripts": {
+  "dev": "npm run browser-open && next dev -p 4000",
+  "browser-open": "start http://localhost:4000",
+},
 ```
 
 ### Package dependencies list:-
@@ -78,16 +89,7 @@ const configs = {
 * usage of alert & dialog system at UI
 * usage of table data display system at UI
 
-### Custom Port & Auto Browser Open
-
-```js
-  "scripts": {
-    "dev": "npm run browser-open && next dev -p 4000",
-    "browser-open": "start http://localhost:4000",
-  },
-```
-
-## Resource
+### Resource
 
 * <https://tiptap.dev>
 * <https://clerk.com>
