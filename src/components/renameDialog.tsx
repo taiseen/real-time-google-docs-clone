@@ -6,6 +6,7 @@ import { useMutation } from "convex/react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { useState } from "react";
+import { toast } from "sonner";
 import {
   DialogDescription,
   DialogContent,
@@ -43,7 +44,11 @@ const RenameDialog = ({
     setIsUpdating(true);
 
     update({ id: documentId, title: title.trim() || "Untitled" })
-      .then(() => setOpen(false))
+      .then(() => {
+        setOpen(false);
+        toast.success("Document rename successfully.");
+      })
+      .catch(() => toast.error("Failed to update document."))
       .finally(() => setIsUpdating(false));
   };
 
@@ -55,6 +60,7 @@ const RenameDialog = ({
         <form onSubmit={onSubmit}>
           <DialogHeader>
             <DialogTitle>Rename Document</DialogTitle>
+
             <DialogDescription>
               Enter a new name for this document.
             </DialogDescription>

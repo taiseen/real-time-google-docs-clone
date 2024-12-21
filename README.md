@@ -20,6 +20,15 @@ npm run dev
 npx convex dev
 ```
 
+### Need these config values to run this project:-
+
+```js
+const configs = {
+    NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+}
+```
+
 ### Package dependencies list:-
 
 * npx create-next-app@15.0.3

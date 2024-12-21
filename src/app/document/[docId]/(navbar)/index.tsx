@@ -1,3 +1,4 @@
+import ClerkAuthUI from "@/components/clerkAuthUI";
 import RootLink from "@/components/rootLink";
 import DocumentInput from "./documentInput";
 import MenuBar from "./menuBar";
@@ -13,6 +14,8 @@ const Navbar = () => {
           <MenuBar />
         </div>
       </div>
+
+      <ClerkAuthUI />
     </nav>
   );
 };

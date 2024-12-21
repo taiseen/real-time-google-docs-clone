@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useMutation } from "convex/react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 import {
   CarouselPrevious,
   CarouselContent,
@@ -24,7 +25,11 @@ const TemplatesGallery = () => {
     setIsCreating(true);
 
     create({ title, initialContent })
-      .then((documentId) => router.push(`/document/${documentId}`))
+      .then((documentId) => {
+        toast.success("Document create successfully....");
+        router.push(`/document/${documentId}`);
+      })
+      .catch(() => toast.error("Failed to create document."))
       .finally(() => setIsCreating(false));
   };
 
