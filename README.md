@@ -2,6 +2,26 @@
 
 ## Real Time Google Doc Clone
 
+### Locally dependencies installed:-
+
+```js
+npm i --legacy-peer-deps
+```
+
+### For locally run this project:-
+
+```js
+npm run dev
+```
+
+### For running database:-
+
+```js
+npx convex dev
+```
+
+### Package dependencies list:-
+
 * npx create-next-app@15.0.3
 * npx shadcn@2.1.6 init
 * npm install @tiptap/pm@2.10.2 --legacy-peer-deps
@@ -30,24 +50,6 @@
 * npm install convex@1.17.3 --legacy-peer-deps
 * npm install @clerk/nextjs@6.5.1 --legacy-peer-deps
 * npm install --save-dev @types/react-color@3.0.12 --legacy-peer-deps
-
-### Locally dependencies installed:-
-
-```js
-npm i --legacy-peer-deps
-```
-
-### For locally run this project:-
-
-```js
-npm run dev
-```
-
-### For running database:-
-
-```js
-npx convex dev
-```
 
 ### Learning Points:-
 

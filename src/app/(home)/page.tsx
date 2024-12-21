@@ -3,14 +3,17 @@
 import { api } from "../../../convex/_generated/api";
 import { usePaginatedQuery } from "convex/react";
 import { paginateNum } from "@/constants/data";
+import useSearchParam from "@/hooks/useSearchParam";
 import TemplatesGallery from "./templatesGallery";
 import DocumentsTable from "./documentsTable";
 import Navbar from "./navbar";
 
 const Home = () => {
+  const [search] = useSearchParam();
+
   const { results, status, loadMore } = usePaginatedQuery(
     api.documents.get,
-    {},
+    { search },
     { initialNumItems: paginateNum }
   );
 
