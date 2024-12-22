@@ -1,6 +1,7 @@
 import Toolbar from "./(toolbar)";
 import Editor from "./(editor)";
 import Navbar from "./(navbar)";
+import Room from "./(liveblocks)/room";
 
 interface DocumentIdPageProps {
   params: Promise<{ docId: string }>;
@@ -8,7 +9,7 @@ interface DocumentIdPageProps {
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
   const { docId } = await params;
-  console.log(docId);
+  // console.log(docId);
 
   return (
     <div className="min-h-screen bg-doc">
@@ -21,7 +22,9 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
       </div>
 
       <div className="pt-[114px] print:pt-0">
-        <Editor />
+        <Room>
+          <Editor />
+        </Room>
       </div>
     </div>
   );
