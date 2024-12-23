@@ -77,6 +77,7 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = *****
 * npm i @liveblocks/react@2.12.2 --legacy-peer-deps
 * npm i @liveblocks/react-ui@2.12.2 --legacy-peer-deps
 * npm i @liveblocks/react-tiptap@2.12.2 --legacy-peer-deps
+* npm i @liveblocks/node@2.12.2 -- legacy-peer-deps
 * npm i @tiptap/extension-collaboration@2.10.2 --legacy-peer-deps
 * npm i @tiptap/extension-collaboration-cursor@2.10.2 --legacy-peer-deps
 * npm i y-protocols@1.0.6 --legacy-peer-deps

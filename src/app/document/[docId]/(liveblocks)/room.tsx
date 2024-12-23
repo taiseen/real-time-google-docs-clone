@@ -15,7 +15,7 @@ const Room = ({ children }: { children: ReactNode }) => {
   // console.log(process.env.LIVE_BLOCKS_PUBLIC_KEY);
 
   return (
-    <LiveblocksProvider publicApiKey={""}>
+    <LiveblocksProvider throttle={16} authEndpoint={`/api/liveblocks-auth`}>
       <RoomProvider id={params.docId as string}>
         <ClientSideSuspense fallback={<div>Loading…</div>}>
           {children}

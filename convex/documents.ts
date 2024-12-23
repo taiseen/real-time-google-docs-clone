@@ -45,7 +45,6 @@ export const get = query({
             .query("documents")
             .withIndex("by_owner_id", (q) => q.eq("ownerId", user.subject))
             .paginate(paginationOpts);
-
     },
 });
 
@@ -86,7 +85,8 @@ export const removeById = mutation({
             | undefined;
 
         const isOwner = document.ownerId === user.subject;
-        const isOrganization = document.organizationId === organizationId;
+        const isOrganization =
+            !!(document.organizationId && document.organizationId === organizationId);
         if (!isOwner && !isOrganization) throw new ConvexError("Unauthorized");
 
         return await ctx.db.delete(args.id);
@@ -108,10 +108,16 @@ export const updateById = mutation({
             | undefined;
 
         const isOwner = document.ownerId === user.subject;
-        const isOrganization = document.organizationId === organizationId;
+        const isOrganization =
+            !!(document.organizationId && document.organizationId === organizationId);
 
         if (!isOwner && !isOrganization) throw new ConvexError("Unauthorized");
 
         return await ctx.db.patch(args.id, { title: args.title });
     }
+});
+
+export const getById = query({
+    args: { id: v.id("documents") },
+    handler: async (ctx, { id }) => await ctx.db.get(id),
 });
