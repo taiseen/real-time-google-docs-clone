@@ -27,6 +27,7 @@ npx convex dev
 ```js
 CLERK_SECRET_KEY = *****
 CONVEX_DEPLOYMENT = *****
+LIVEBLOCKS_SECRET_KEY = *****
 NEXT_PUBLIC_CONVEX_URL = *****
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = *****
 ```
@@ -107,3 +108,4 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = *****
 * <https://clerk.com>
 * <https://convex.dev>
 * <https://logoipsum.com>
+* <https://liveblocks.io>

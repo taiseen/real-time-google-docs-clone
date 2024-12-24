@@ -34,7 +34,7 @@ const ErrorPage = ({
         </Button>
 
         <Button className="font-medium" variant="ghost" asChild>
-          <Link href="/">Try again</Link>
+          <Link href="/">Back to home</Link>
         </Button>
       </div>
     </div>
