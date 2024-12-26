@@ -9,7 +9,7 @@ interface DocumentIdPageProps {
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
   const { docId } = await params;
-  // console.log(docId);
+  console.log(docId);
 
   return (
     <Room>
