@@ -1,6 +1,16 @@
 "use server";
 
+import configs from "@/config";
+import { Id } from "../../../../convex/_generated/dataModel";
 import { auth, clerkClient } from "@clerk/nextjs/server";
+import { api } from "../../../../convex/_generated/api";
+import { ConvexHttpClient } from "convex/browser";
+
+const convex = new ConvexHttpClient(configs.NEXT_CONVEX_URL!);
+
+export async function getDocuments(ids: Id<"documents">[]) {
+    return await convex.query(api.documents.getByIds, { ids });
+}
 
 export async function getUsers() {
     const { sessionClaims } = await auth();

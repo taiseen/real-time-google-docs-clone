@@ -34,12 +34,20 @@ const Room = ({ children }: { children: ReactNode }) => {
     fetchUsers();
   }, [fetchUsers]);
 
-  // console.log("key ", configs?.LIVE_BLOCKS_KEY);
-  // console.log(process.env.LIVE_BLOCKS_PUBLIC_KEY);
-
   return (
     <LiveblocksProvider
       authEndpoint={`/api/liveblocks-auth`}
+      // authEndpoint={async () => {
+      //   const endpoint = "/api/liveblocks-auth";
+      //   const room = params.documentId as string;
+
+      //   const response = await fetch(endpoint, {
+      //     method: "POST",
+      //     body: JSON.stringify({ room }),
+      //   });
+
+      //   return await response.json();
+      // }}
       resolveMentionSuggestions={({ text }) => {
         let filteredUsers = users;
         if (text) {
@@ -50,6 +58,13 @@ const Room = ({ children }: { children: ReactNode }) => {
         return filteredUsers.map((user) => user.id);
       }}
       resolveRoomsInfo={() => []}
+      // resolveRoomsInfo={async ({ roomIds }) => {
+      //   const documents = await getDocuments(roomIds as Id<"documents">[]);
+      //   return documents.map((document) => ({
+      //     id: document.id,
+      //     name: document.name,
+      //   }));
+      // }}
       resolveUsers={({ userIds }) => {
         return userIds.map(
           (userId) => users.find((user) => user.id === userId) ?? undefined

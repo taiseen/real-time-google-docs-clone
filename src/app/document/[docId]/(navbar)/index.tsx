@@ -3,6 +3,7 @@ import RootLink from "@/components/rootLink";
 import DocumentInput from "./documentInput";
 import MenuBar from "./menuBar";
 import Avatars from "../avatars";
+// import Inbox from "../(inbox)";
 
 const Navbar = () => {
   return (
@@ -18,6 +19,8 @@ const Navbar = () => {
 
       <div className="flex gap-3 items-center pl-6">
         <Avatars />
+
+        {/* <Inbox /> */}
 
         <OrganizationSwitcher
           afterCreateOrganizationUrl="/"
