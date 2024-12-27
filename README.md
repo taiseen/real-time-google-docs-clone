@@ -109,5 +109,3 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = *****
 * <https://convex.dev>
 * <https://logoipsum.com>
 * <https://liveblocks.io>
-
-git commit 'feat: notifications system'
