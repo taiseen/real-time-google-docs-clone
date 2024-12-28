@@ -1,4 +1,4 @@
-import ClerkAuthUI from "@/components/clerkAuthUI";
+import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import RootLink from "@/components/rootLink";
 import SearchInput from "./searchInput";
 
@@ -13,7 +13,16 @@ const Navbar = () => {
 
       <SearchInput />
 
-      <ClerkAuthUI />
+      <div className="flex gap-3 items-center pl-6">
+        <OrganizationSwitcher
+          afterCreateOrganizationUrl="/"
+          afterSelectOrganizationUrl="/"
+          afterLeaveOrganizationUrl="/"
+          afterSelectPersonalUrl="/"
+        />
+
+        <UserButton />
+      </div>
     </nav>
   );
 };

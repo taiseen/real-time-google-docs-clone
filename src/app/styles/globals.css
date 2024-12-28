@@ -294,7 +294,6 @@ body {
   }
 }
 
-
 div[data-radix-popper-content-wrapper] {
   z-index: 50 !important;
-  };
+};
