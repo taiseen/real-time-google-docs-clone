@@ -13,9 +13,28 @@ import {
 
 type User = { id: string; name: string; avatar: string };
 
+type User = { id: string; name: string; avatar: string };
+
 const Room = ({ children }: { children: ReactNode }) => {
   const params = useParams();
 
+  const [users, setUsers] = useState<User[]>([]);
+
+  const fetchUsers = useMemo(
+    () => async () => {
+      try {
+        const list = await getUsers();
+        setUsers(list);
+      } catch {
+        toast.error("Failed to fetch users");
+      }
+    },
+    []
+  );
+
+  useEffect(() => {
+    fetchUsers();
+  }, [fetchUsers]);
   const [users, setUsers] = useState<User[]>([]);
 
   const fetchUsers = useMemo(
@@ -73,6 +92,9 @@ const Room = ({ children }: { children: ReactNode }) => {
       throttle={16}
     >
       <RoomProvider id={params.docId as string}>
+        <ClientSideSuspense
+          fallback={<FullscreenLoader label="Room Loading..." />}
+        >
         <ClientSideSuspense
           fallback={<FullscreenLoader label="Room Loading..." />}
         >
