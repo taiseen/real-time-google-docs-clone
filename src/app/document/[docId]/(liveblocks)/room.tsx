@@ -37,6 +37,7 @@ const Room = ({ children }: { children: ReactNode }) => {
   return (
     <LiveblocksProvider
       authEndpoint={`/api/liveblocks-auth`}
+      // 🟧🟧🟧 INFO: project is going to crash when trying to authEndpoint by below code...
       // authEndpoint={async () => {
       //   const endpoint = "/api/liveblocks-auth";
       //   const room = params.documentId as string;
@@ -48,6 +49,7 @@ const Room = ({ children }: { children: ReactNode }) => {
 
       //   return await response.json();
       // }}
+
       resolveMentionSuggestions={({ text }) => {
         let filteredUsers = users;
         if (text) {
@@ -58,6 +60,7 @@ const Room = ({ children }: { children: ReactNode }) => {
         return filteredUsers.map((user) => user.id);
       }}
       resolveRoomsInfo={() => []}
+      // 🟧🟧🟧 INFO: project is going to crash when trying to resolveRoomsInfo by below code...
       // resolveRoomsInfo={async ({ roomIds }) => {
       //   const documents = await getDocuments(roomIds as Id<"documents">[]);
       //   return documents.map((document) => ({
@@ -72,7 +75,10 @@ const Room = ({ children }: { children: ReactNode }) => {
       }}
       throttle={16}
     >
-      <RoomProvider id={params.docId as string}>
+      <RoomProvider
+        id={params.docId as string}
+        initialStorage={{ leftMargin: 56, rightMargin: 56 }}
+      >
         <ClientSideSuspense
           fallback={<FullscreenLoader label="Room Loading..." />}
         >
